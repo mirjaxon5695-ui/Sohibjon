@@ -1,4 +1,19 @@
-<title>Usta Sohib - Sementli Tiyaga Xizmati | Sifatli va Arzon</title> <style> * { margin: 0; padding: 0; box-sizing: border-box; }
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Usta Sohib — sementli tiyaga, fasad va ichki tiyaga xizmati. Sifatli ish, arzon narx, o'z vaqtida bajarish. Tel: +998 94 556 69 90">
+<meta name="theme-color" content="#0f0f1a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Usta Sohib — Sementli Tiyaga Xizmati">
+<meta property="og:description" content="Sifatli va arzon sementli tiyaga xizmati. Qo'ng'iroq: +998 94 556 69 90">
+<title>Usta Sohib - Sementli Tiyaga Xizmati | Sifatli va Arzon</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏠%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style> * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
         --primary: #1a1a2e;
         --secondary: #e94560;
@@ -1358,11 +1373,30 @@
             text-align: center;
         }
     }
+
+    /* ===== HERO BACKGROUND (modern villa) ===== */
+    .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+    .hero-overlay {
+        position: absolute; inset: 0; z-index: 1;
+        background: linear-gradient(90deg, rgba(8,8,18,0.90) 0%, rgba(8,8,18,0.66) 46%, rgba(8,8,18,0.28) 100%);
+    }
+    @media (max-width: 992px) {
+        .hero-overlay { background: linear-gradient(180deg, rgba(8,8,18,0.82) 0%, rgba(8,8,18,0.62) 100%); }
+    }
+
+    /* ===== FORM STATUS ===== */
+    .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .form-status { display: none; margin: 4px 0 14px; padding: 12px 16px; border-radius: 10px; font-size: 0.92rem; line-height: 1.5; }
+    .form-status.ok { display: block; background: rgba(37,211,102,0.12); color: #1a9d4b; border: 1px solid rgba(37,211,102,0.4); }
+    .form-status.err { display: block; background: rgba(233,69,96,0.1); color: #c0283f; border: 1px solid rgba(233,69,96,0.35); }
+    .form-submit:disabled { opacity: 0.7; cursor: not-allowed; }
 </style>
+</head>
+<body>
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
     <div class="nav-container">
-        <a href="#" class="nav-logo">
+        <a href="#bosh-sahifa" class="nav-logo">
             <div class="nav-logo-icon">US</div>
             <div class="nav-logo-text">Usta <span>Sohib</span></div>
         </a>
@@ -1384,6 +1418,64 @@
 
 <!-- HERO -->
 <section class="hero" id="bosh-sahifa">
+    <svg class="hero-bg" viewBox="0 0 1600 900" preserveAspectRatio="xMaxYMax slice" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="vSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#090c20"/><stop offset=".5" stop-color="#2a2150"/>
+                <stop offset=".82" stop-color="#b8546b"/><stop offset="1" stop-color="#f2a661"/>
+            </linearGradient>
+            <linearGradient id="vGlass" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffe9b0"/><stop offset="1" stop-color="#f4a640"/>
+            </linearGradient>
+            <linearGradient id="vWall" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f4f1ea"/><stop offset="1" stop-color="#c9c3b6"/>
+            </linearGradient>
+            <linearGradient id="vPool" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#37c4e2"/><stop offset="1" stop-color="#0a6a92"/>
+            </linearGradient>
+            <radialGradient id="vGlow" cx=".5" cy=".5" r=".5">
+                <stop offset="0" stop-color="#ffc766" stop-opacity=".45"/><stop offset="1" stop-color="#ffc766" stop-opacity="0"/>
+            </radialGradient>
+            <pattern id="vSlats" width="16" height="12" patternUnits="userSpaceOnUse">
+                <rect width="16" height="12" fill="#8d5b32"/><rect y="10" width="16" height="2" fill="#5f3b1f"/>
+            </pattern>
+        </defs>
+        <rect width="1600" height="900" fill="url(#vSky)"/>
+        <g fill="#fff" opacity=".8">
+            <circle cx="140" cy="90" r="1.6"/><circle cx="320" cy="160" r="1.2"/><circle cx="520" cy="60" r="1.8"/>
+            <circle cx="760" cy="130" r="1.3"/><circle cx="980" cy="70" r="1.6"/><circle cx="1180" cy="150" r="1.2"/>
+            <circle cx="1380" cy="80" r="1.8"/><circle cx="1500" cy="190" r="1.3"/><circle cx="60" cy="230" r="1.2"/>
+        </g>
+        <circle cx="1280" cy="150" r="34" fill="#fdf3d8" opacity=".9"/>
+        <path d="M0 700 Q250 610 520 680 T1100 660 T1600 690 V900 H0Z" fill="#10172b"/>
+        <ellipse cx="1060" cy="600" rx="620" ry="260" fill="url(#vGlow)"/>
+        <rect y="770" width="1600" height="130" fill="#14171d"/>
+        <!-- villa -->
+        <rect x="860" y="392" width="540" height="170" fill="url(#vWall)"/>
+        <rect x="620" y="560" width="900" height="212" fill="url(#vWall)"/>
+        <rect x="838" y="372" width="584" height="22" fill="#1b1b24"/>
+        <rect x="598" y="548" width="944" height="14" fill="#1b1b24"/>
+        <rect x="890" y="416" width="300" height="126" fill="url(#vGlass)"/>
+        <g fill="#16161d"><rect x="988" y="416" width="5" height="126"/><rect x="1088" y="416" width="5" height="126"/><rect x="887" y="413" width="306" height="4"/><rect x="887" y="540" width="306" height="4"/></g>
+        <rect x="1224" y="412" width="146" height="132" fill="url(#vSlats)"/>
+        <rect x="650" y="592" width="440" height="150" fill="url(#vGlass)"/>
+        <g fill="#16161d"><rect x="758" y="592" width="5" height="150"/><rect x="866" y="592" width="5" height="150"/><rect x="974" y="592" width="5" height="150"/><rect x="647" y="589" width="446" height="4"/><rect x="647" y="740" width="446" height="4"/></g>
+        <rect x="1120" y="600" width="86" height="172" fill="#1b1b24"/><rect x="1128" y="608" width="70" height="164" fill="#2a2a36"/>
+        <rect x="1240" y="590" width="250" height="160" fill="url(#vSlats)"/>
+        <rect x="620" y="768" width="900" height="8" fill="#0d0d12"/>
+        <!-- pool -->
+        <rect x="540" y="806" width="760" height="70" rx="6" fill="url(#vPool)"/>
+        <rect x="548" y="812" width="744" height="10" rx="4" fill="#fff" opacity=".12"/>
+        <ellipse cx="880" cy="842" rx="260" ry="9" fill="#ffd27a" opacity=".28"/>
+        <!-- trees & lights -->
+        <rect x="408" y="560" width="14" height="214" fill="#0b130d"/>
+        <circle cx="415" cy="540" r="78" fill="#0f2a1e"/><circle cx="360" cy="590" r="58" fill="#12341f"/><circle cx="470" cy="596" r="56" fill="#0d2418"/>
+        <rect x="1568" y="580" width="12" height="194" fill="#0b130d"/>
+        <circle cx="1574" cy="560" r="62" fill="#0f2a1e"/><circle cx="1530" cy="610" r="46" fill="#12341f"/>
+        <g fill="#0f2a1e"><ellipse cx="640" cy="776" rx="52" ry="18"/><ellipse cx="1000" cy="778" rx="60" ry="16"/><ellipse cx="1480" cy="778" rx="50" ry="17"/></g>
+        <g fill="#ffd27a"><circle cx="560" cy="790" r="3"/><circle cx="780" cy="792" r="3"/><circle cx="1100" cy="792" r="3"/><circle cx="1300" cy="790" r="3"/></g>
+    </svg>
+    <div class="hero-overlay"></div>
     <div class="hero-container">
         <div class="hero-content">
             <h1>Professional <span>Sementli Tiyaga</span> Xizmati</h1>
@@ -1391,17 +1483,17 @@
             <div class="hero-badges">
                 <div class="hero-badge">✅ Sifatli ish</div>
                 <div class="hero-badge">💰 Arzon narx</div>
-                <div class="hero-badge"> O'z vaqtida</div>
+                <div class="hero-badge">⏰ O'z vaqtida</div>
             </div>
             <div class="hero-buttons">
                 <a href="tel:+998945566990" class="btn-primary">📞 Qo'ng'iroq qilish</a>
-                <a href="#xizmatlar" class="btn-secondary"> Xizmatlarni ko'rish</a>
+                <a href="#xizmatlar" class="btn-secondary">🛠️ Xizmatlarni ko'rish</a>
             </div>
         </div>
         <div class="hero-visual">
             <div class="hero-image-wrapper">
                 <div class="hero-main-circle">
-                    <span class="icon-big">️</span>
+                    <span class="icon-big">🏗️</span>
                     <span class="label">USTA SOHIB</span>
                     <span class="sublabel">Tiyaga Jamoasi</span>
                 </div>
@@ -1736,15 +1828,15 @@
                 <form id="contactForm" onsubmit="handleSubmit(event)">
                     <div class="form-group">
                         <label>Ismingiz</label>
-                        <input type="text" placeholder="Ismingizni kiriting" required>
+                        <input type="text" name="name" autocomplete="name" maxlength="60" placeholder="Ismingizni kiriting" required>
                     </div>
                     <div class="form-group">
                         <label>Telefon raqamingiz</label>
-                        <input type="tel" placeholder="+998 __ ___ __ __" required>
+                        <input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="+998 __ ___ __ __" required>
                     </div>
                     <div class="form-group">
                         <label>Xizmat turi</label>
-                        <select required>
+                        <select name="service" required>
                             <option value="">Tanlang...</option>
                             <option>Sementli tiyaga</option>
                             <option>Fasad tiyaga</option>
@@ -1757,8 +1849,10 @@
                     </div>
                     <div class="form-group">
                         <label>Xabar</label>
-                        <textarea placeholder="Loyihangiz haqida qisqacha yozing..."></textarea>
+                        <textarea name="message" maxlength="500" placeholder="Loyihangiz haqida qisqacha yozing..."></textarea>
                     </div>
+                    <div class="hp-field" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+                    <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
                     <button type="submit" class="form-submit">📩 Ariza yuborish</button>
                 </form>
             </div>
@@ -1821,6 +1915,7 @@
 <a href="https://t.me/+998945566990" class="whatsapp-float" target="_blank" title="Telegram orqali yozish"></a>
 
 <script>
+
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
         const navbar = document.getElementById('navbar');
@@ -1881,29 +1976,90 @@
 
     observer.observe(statsSection);
 
-    // Form submission
-    function handleSubmit(e) {
+    // ===== Telegram sozlamalari =====
+    // @BotFather dan olingan bot tokeni va arizalar keladigan chat ID ni shu yerga yozing
+    const TELEGRAM_BOT_TOKEN = '';
+    const TELEGRAM_CHAT_ID = '';
+    const PHONE_TEXT = '+998 94 556 69 90';
+
+    let lastSentAt = 0;
+
+    function esc(s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function setStatus(el, type, text) {
+        el.className = 'form-status ' + type;
+        el.textContent = text;
+    }
+
+    async function handleSubmit(e) {
         e.preventDefault();
-        const btn = e.target.querySelector('.form-submit');
-        btn.textContent = '✅ Yuborildi!';
-        btn.style.background = '#25d366';
-        btn.style.color = '#fff';
-        setTimeout(() => {
-            btn.textContent = ' Ariza yuborish';
-            btn.style.background = '';
-            btn.style.color = '';
-            e.target.reset();
-        }, 3000);
+        const form = e.target;
+        const btn = form.querySelector('.form-submit');
+        const status = document.getElementById('formStatus');
+        const data = new FormData(form);
+
+        if (data.get('website')) return; // spam tuzog'i (honeypot)
+
+        const name = String(data.get('name') || '').trim();
+        const phone = String(data.get('phone') || '').trim();
+        const service = String(data.get('service') || '').trim();
+        const message = String(data.get('message') || '').trim();
+
+        if (name.length < 2) return setStatus(status, 'err', 'Iltimos, ismingizni kiriting.');
+        if (phone.replace(/\D/g, '').length < 9) return setStatus(status, 'err', "Telefon raqami noto'g'ri kiritilgan.");
+        if (Date.now() - lastSentAt < 30000) return setStatus(status, 'err', 'Iltimos, bir oz kuting va qayta urinib ko\'ring.');
+
+        if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+            return setStatus(status, 'err', 'Ariza yuborish hozircha ishlamayapti. Iltimos, qo\'ng\'iroq qiling: ' + PHONE_TEXT);
+        }
+
+        const text =
+            '🆕 <b>Yangi ariza (sayt)</b>\n' +
+            '👤 Ism: ' + esc(name) + '\n' +
+            '📞 Telefon: ' + esc(phone) + '\n' +
+            '🛠 Xizmat: ' + esc(service) + '\n' +
+            '💬 Xabar: ' + esc(message || '—') + '\n' +
+            '🕒 ' + new Date().toLocaleString('uz-UZ');
+
+        const oldLabel = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = '⏳ Yuborilmoqda...';
+
+        try {
+            const res = await fetch('https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: text, parse_mode: 'HTML' })
+            });
+            const json = await res.json();
+            if (!res.ok || !json.ok) throw new Error('Telegram xatosi');
+
+            lastSentAt = Date.now();
+            form.reset();
+            setStatus(status, 'ok', "✅ Arizangiz yuborildi! Tez orada siz bilan bog'lanamiz.");
+        } catch (err) {
+            setStatus(status, 'err', 'Yuborib bo\'lmadi. Iltimos, qo\'ng\'iroq qiling: ' + PHONE_TEXT);
+        } finally {
+            btn.disabled = false;
+            btn.textContent = oldLabel;
+        }
     }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (!href || href.length < 2) return; // bo'sh "#" havolalarni o'tkazib yuboramiz
+            const target = document.querySelector(href);
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
+
 </script>
+</body>
+</html>

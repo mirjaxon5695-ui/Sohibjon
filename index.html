@@ -1524,6 +1524,25 @@
     .form-status.err { display: block; background: rgba(233,69,96,0.1); color: #c0283f; border: 1px solid rgba(233,69,96,0.35); }
     .form-submit:disabled { opacity: 0.7; cursor: not-allowed; }
 </style>
+<script src="holat.js"></script>
+<script>
+// Sayt holati: holat.js ichida "faol" yoki "toxtatilgan"
+(function () {
+    if (window.SAYT_HOLATI !== 'toxtatilgan') return;
+    var st = document.createElement('style');
+    st.textContent = 'html,body{height:100%;margin:0;background:#111}body>*:not(#sayt-qulf){display:none!important}';
+    document.head.appendChild(st);
+    document.addEventListener('DOMContentLoaded', function () {
+        var d = document.createElement('div');
+        d.id = 'sayt-qulf';
+        d.style.cssText = 'position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;color:#fff;font-family:Arial,sans-serif;background:#111;z-index:99999';
+        d.innerHTML = '<div style="font-size:3.5rem;margin-bottom:15px">⛔</div>' +
+            '<h1 style="font-size:1.8rem;margin:0 0 12px">Sayt vaqtincha to\'xtatilgan</h1>' +
+            '<p style="font-size:1.1rem;color:#ccc;max-width:480px;margin:0">Avval to\'lovni amalga oshiring. To\'lov qilingach sayt qayta ishga tushadi.</p>';
+        document.body.appendChild(d);
+    });
+})();
+</script>
 </head>
 <body>
 <!-- NAVBAR -->

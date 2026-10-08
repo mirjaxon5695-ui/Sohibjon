@@ -318,6 +318,38 @@
         border: 3px solid rgba(201,168,76,0.3);
     }
 
+    .hero-main-circle {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .hero-main-circle .hero-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+        display: block;
+    }
+
+    .hero-main-circle .hero-photo-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 40px 10px 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
+    }
+
+    .hero-main-circle .hero-photo-caption .sublabel {
+        color: #ddd;
+    }
+
     .hero-main-circle .icon-big {
         font-size: 5rem;
         margin-bottom: 10px;
@@ -1214,7 +1246,7 @@
         z-index: 999;
         width: 60px;
         height: 60px;
-        background: #25d366;
+        background: #229ED9;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -1222,7 +1254,7 @@
         font-size: 1.8rem;
         color: #fff;
         text-decoration: none;
-        box-shadow: 0 5px 25px rgba(37,211,102,0.4);
+        box-shadow: 0 5px 25px rgba(34,158,217,0.45);
         animation: pulse 2s infinite;
         transition: transform 0.3s;
     }
@@ -1232,9 +1264,9 @@
     }
 
     @keyframes pulse {
-        0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
-        70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
-        100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        0% { box-shadow: 0 0 0 0 rgba(34,158,217,0.45); }
+        70% { box-shadow: 0 0 0 15px rgba(34,158,217,0); }
+        100% { box-shadow: 0 0 0 0 rgba(34,158,217,0); }
     }
 
     /* ===== RESPONSIVE ===== */
@@ -1257,6 +1289,15 @@
         }
 
         .hero-visual {
+            margin-top: 50px;
+        }
+
+        .hero-image-wrapper {
+            width: 280px;
+            height: 280px;
+        }
+
+        .floating-card {
             display: none;
         }
 
@@ -1493,9 +1534,11 @@
         <div class="hero-visual">
             <div class="hero-image-wrapper">
                 <div class="hero-main-circle">
-                    <span class="icon-big">🏗️</span>
-                    <span class="label">USTA SOHIB</span>
-                    <span class="sublabel">Tiyaga Jamoasi</span>
+                    <img src="sohib.jpg" alt="Usta Sohib — sementli tiyaga ustasi" class="hero-photo" loading="eager">
+                    <div class="hero-photo-caption">
+                        <span class="label">USTA SOHIB</span>
+                        <span class="sublabel">Tiyaga Jamoasi</span>
+                    </div>
                 </div>
                 <div class="floating-card">
                     <div class="fc-number">855+</div>
@@ -1912,7 +1955,9 @@
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://t.me/+998945566990" class="whatsapp-float" target="_blank" title="Telegram orqali yozish"></a>
+<a href="https://t.me/+998945566990" class="whatsapp-float" target="_blank" rel="noopener" title="Telegram orqali yozish" aria-label="Telegram orqali yozish">
+    <svg viewBox="0 0 24 24" width="32" height="32" fill="#fff" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+</a>
 
 <script>
 

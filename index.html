@@ -552,6 +552,37 @@
         font-size: 1.3rem;
     }
 
+    .about-video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: 3;
+        border-radius: 20px;
+    }
+
+    .about-sound-btn {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        z-index: 4;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+        .about-video {
+            object-fit: cover;
+        }
+    }
+
     .about-experience-badge {
         position: absolute;
         bottom: -20px;
@@ -1594,6 +1625,8 @@
                         <span class="emoji">👷‍♂️</span>
                         <span class="text">Umarov Sohibjon</span>
                     </div>
+                    <video class="about-video" id="tajribaVideo" src="tajriba.mp4" poster="tajriba-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+                    <button type="button" class="about-sound-btn" id="tajribaSound" aria-label="Ovozni yoqish/o'chirish">🔇</button>
                 </div>
                 <div class="about-experience-badge">10+ yil tajriba</div>
             </div>
@@ -1960,6 +1993,18 @@
 </a>
 
 <script>
+
+    // Tajriba videosi: ovozni yoqish/o'chirish
+    (function () {
+        const v = document.getElementById('tajribaVideo');
+        const b = document.getElementById('tajribaSound');
+        if (!v || !b) return;
+        b.addEventListener('click', function () {
+            v.muted = !v.muted;
+            b.textContent = v.muted ? '🔇' : '🔊';
+            if (v.paused) v.play().catch(function () {});
+        });
+    })();
 
     // Navbar scroll effect
     window.addEventListener('scroll', () => {

@@ -758,6 +758,67 @@
         grid-row: span 2;
     }
 
+    .gallery-item .g-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 35%;
+        z-index: 1;
+    }
+
+    .gallery-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        display: none;
+        flex-direction: column;
+        padding: 40px 18px 16px;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    }
+
+    .gallery-item.has-img .gallery-caption {
+        display: flex;
+    }
+
+    .gallery-caption .g-text {
+        color: var(--gold);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .gallery-caption .g-sub {
+        color: #ddd;
+        font-size: 0.8rem;
+        margin-top: 3px;
+    }
+
+    .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        background: rgba(0,0,0,0.92);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        cursor: zoom-out;
+    }
+
+    .lightbox.open {
+        display: flex;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+    }
+
     .gallery-item-content {
         position: absolute;
         inset: 0;
@@ -1712,51 +1773,63 @@
         <div class="gallery-grid">
             <div class="gallery-item">
                 <div class="gallery-item-content">
-                    <span class="g-emoji">🏘️</span>
-                    <span class="g-text">Turar-joy majmuasi</span>
-                    <span class="g-sub">To'liq tiyaga ishlari</span>
-                </div>
-                <div class="gallery-overlay"><span>Batafsil ko'rish →</span></div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-item-content">
                     <span class="g-emoji">🏡</span>
+                </div>
+                <img class="g-photo" src="ish-1.jpg" alt="Shaxsiy uyning to'liq fasad tiyaga ishi" loading="lazy" onload="this.parentElement.classList.add('has-img')" onerror="this.style.display='none'">
+                <div class="gallery-caption">
                     <span class="g-text">Shaxsiy uy</span>
-                    <span class="g-sub">Fasad tiyaga</span>
+                    <span class="g-sub">To'liq fasad tiyaga</span>
                 </div>
-                <div class="gallery-overlay"><span>Batafsil ko'rish →</span></div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-item-content">
-                    <span class="g-emoji">🏛️</span>
-                    <span class="g-text">Ustunlar</span>
-                    <span class="g-sub">Dekorativ tiyaga</span>
-                </div>
-                <div class="gallery-overlay"><span>Batafsil ko'rish →</span></div>
             </div>
             <div class="gallery-item">
                 <div class="gallery-item-content">
                     <span class="g-emoji">🏠</span>
-                    <span class="g-text">Kottej</span>
-                    <span class="g-sub">Ichki tiyaga</span>
                 </div>
-                <div class="gallery-overlay"><span>Batafsil ko'rish →</span></div>
+                <img class="g-photo" src="ish-2.jpg" alt="Deraza va balkon atrofidagi tiyaga" loading="lazy" onload="this.parentElement.classList.add('has-img')" onerror="this.style.display='none'">
+                <div class="gallery-caption">
+                    <span class="g-text">Fasad tiyaga</span>
+                    <span class="g-sub">Deraza va balkon bezagi</span>
+                </div>
             </div>
             <div class="gallery-item">
                 <div class="gallery-item-content">
-                    <span class="g-emoji">️</span>
-                    <span class="g-text">Ko'p qavatli uy</span>
-                    <span class="g-sub">Qurilish ishlari</span>
+                    <span class="g-emoji">🏛️</span>
                 </div>
-                <div class="gallery-overlay"><span>Batafsil ko'rish →</span></div>
+                <img class="g-photo" src="ish-3.jpg" alt="Dekorativ ustunlar va balkon" loading="lazy" onload="this.parentElement.classList.add('has-img')" onerror="this.style.display='none'">
+                <div class="gallery-caption">
+                    <span class="g-text">Ustunlar</span>
+                    <span class="g-sub">Dekorativ tiyaga</span>
+                </div>
             </div>
             <div class="gallery-item">
                 <div class="gallery-item-content">
                     <span class="g-emoji">✨</span>
-                    <span class="g-text">Tayyor natija</span>
-                    <span class="g-sub">Sifatli ish</span>
                 </div>
-                <div class="gallery-overlay"><span>Batafsil ko'rish →</span></div>
+                <img class="g-photo" src="ish-4.jpg" alt="Pilyastr va karniz tafsilotlari" loading="lazy" onload="this.parentElement.classList.add('has-img')" onerror="this.style.display='none'">
+                <div class="gallery-caption">
+                    <span class="g-text">Pilyastr va karniz</span>
+                    <span class="g-sub">Tafsilotlar</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-item-content">
+                    <span class="g-emoji">🏗️</span>
+                </div>
+                <img class="g-photo" src="ish-5.jpg" alt="Kirish qismi tiyaga ishi jarayonida" loading="lazy" onload="this.parentElement.classList.add('has-img')" onerror="this.style.display='none'">
+                <div class="gallery-caption">
+                    <span class="g-text">Kirish qismi</span>
+                    <span class="g-sub">Ish jarayonida</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-item-content">
+                    <span class="g-emoji">🏗️</span>
+                </div>
+                <img class="g-photo" src="ish-6.jpg" alt="Ustun va portal tiyaga ishi jarayonida" loading="lazy" onload="this.parentElement.classList.add('has-img')" onerror="this.style.display='none'">
+                <div class="gallery-caption">
+                    <span class="g-text">Ustun va portal</span>
+                    <span class="g-sub">Ish jarayonida</span>
+                </div>
             </div>
         </div>
     </div>
@@ -1987,12 +2060,31 @@
     </div>
 </footer>
 
+<div class="lightbox" id="lightbox"><img src="" alt=""></div>
+
 <!-- WHATSAPP FLOAT -->
 <a href="https://t.me/+998945566990" class="whatsapp-float" target="_blank" rel="noopener" title="Telegram orqali yozish" aria-label="Telegram orqali yozish">
     <svg viewBox="0 0 24 24" width="32" height="32" fill="#fff" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
 </a>
 
 <script>
+
+    // Galereya: rasmni kattalashtirish
+    (function () {
+        const lb = document.getElementById('lightbox');
+        if (!lb) return;
+        const lbImg = lb.querySelector('img');
+        document.querySelectorAll('.gallery-item.has-img, .gallery-item').forEach(function (item) {
+            item.addEventListener('click', function () {
+                const img = item.querySelector('.g-photo');
+                if (!item.classList.contains('has-img') || !img) return;
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lb.classList.add('open');
+            });
+        });
+        lb.addEventListener('click', function () { lb.classList.remove('open'); });
+    })();
 
     // Tajriba videosi: ovozni yoqish/o'chirish
     (function () {

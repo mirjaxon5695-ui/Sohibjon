@@ -2145,6 +2145,15 @@
         lb.addEventListener('click', function () { lb.classList.remove('open'); });
     })();
 
+    // Usta Sohib rasmi: fayl yuklangan bo'lsa, blokda poster sifatida ko'rsatiladi
+    (function () {
+        const v = document.getElementById('tajribaVideo');
+        if (!v) return;
+        const im = new Image();
+        im.onload = function () { v.poster = 'usta-sohib.jpg'; };
+        im.src = 'usta-sohib.jpg';
+    })();
+
     // Tajriba videosi: ovozni yoqish/o'chirish
     (function () {
         const v = document.getElementById('tajribaVideo');

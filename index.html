@@ -1570,6 +1570,13 @@
     .about-facade { margin-top: 20px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
     .about-facade img { display: block; width: 100%; height: auto; }
     /* Orqa fon surati: Wikimedia Commons, "Taj Mahal Sunset.jpg" */
+
+    /* Tajriba bloki: faqat bitta rasm, ustida "10+ yil tajriba" belgisi */
+    .about-facade { position: relative; margin-top: 0; }
+    /* Bosh sahifa sarlavhasi menyu tagida qolib ketmasin */
+    .hero { padding: 110px 0 60px; }
+    .hero-content h1 { line-height: 1.2; overflow-wrap: break-word; }
+    .hero-content { min-width: 0; }
 </style>
 <script src="holat.js"></script>
 <script>
@@ -1747,17 +1754,9 @@
         </div>
         <div class="about-grid">
             <div class="about-image">
-                <div class="about-img-box">
-                    <div class="about-img-content">
-                        <span class="emoji">👷‍♂️</span>
-                        <span class="text">Umarov Sohibjon</span>
-                    </div>
-                    <video class="about-video" id="tajribaVideo" src="tajriba.mp4" poster="tajriba-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
-                    <button type="button" class="about-sound-btn" id="tajribaSound" aria-label="Ovozni yoqish/o'chirish">🔇</button>
-                <div class="about-experience-badge">10+ yil tajriba</div>
-                </div>
                 <div class="about-facade">
                     <img src="Tajriba%20yangi%20rasm.jpeg" alt="Usta Sohib jamoasi bajargan fasad ishi" loading="lazy">
+                    <div class="about-experience-badge">10+ yil tajriba</div>
                 </div>
             </div>
             <div class="about-text">

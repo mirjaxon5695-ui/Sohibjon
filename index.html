@@ -1548,6 +1548,24 @@
     .form-status.ok { display: block; background: rgba(37,211,102,0.12); color: #1a9d4b; border: 1px solid rgba(37,211,102,0.4); }
     .form-status.err { display: block; background: rgba(233,69,96,0.1); color: #c0283f; border: 1px solid rgba(233,69,96,0.35); }
     .form-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+
+    /* === Sayt orqa foni (Tojmahal) === */
+    body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background:
+            linear-gradient(rgba(10,10,20,0.45), rgba(10,10,20,0.45)),
+            url('IMG_8222.jpeg') center / cover no-repeat;
+        background-color: #0f0f1a;
+    }
+    .stats, .gallery { background: rgba(15,15,26,0.78); }
+    .about, .process, .contact { background: rgba(248,249,250,0.86); }
+    .services, .testimonials { background: rgba(255,255,255,0.88); }
+    /* Bo'lim sarlavhasi yuqoridagi menyu tagida qolib ketmasin */
+    section[id] { scroll-margin-top: 90px; }
+    .about .section-header { padding-top: 10px; }
 </style>
 <script src="holat.js"></script>
 <script>
